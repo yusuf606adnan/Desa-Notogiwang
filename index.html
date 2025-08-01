@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Notogiwang</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Picture -->
+        <div class="profile-picture">
+            <img src="https://via.placeholder.com/120x120/87CEEB/000000?text=MD+MARKET" alt="Desa Notogiwang">
+        </div>
+        
+        <!-- Village Name -->
+        <h1 class="village-name">Desa Notogiwang</h1>
+        
+        <!-- Village Description -->
+        <p class="village-description">Informasi Seputar Desa Notogiwang Kec. Paninggaran Kab. Pekalongan</p>
+        
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <a href="https://wa.me/6281234567890" target="_blank" class="social-icon" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://youtube.com/@desanotogiwang" target="_blank" class="social-icon" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="mailto:desanotogiwang@gmail.com" class="social-icon" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://instagram.com/desanotogiwang" target="_blank" class="social-icon" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@desanotogiwang" target="_blank" class="social-icon" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        
+        <!-- Menu Buttons -->
+        <div class="menu-buttons">
+            <a href="profile-desa.html" class="menu-button" onclick="handleClick(this)">
+                <i class="fas fa-users"></i>
+                <span>Profile Desa</span>
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
+            
+            <a href="struktur-kepengurusan.html" class="menu-button" onclick="handleClick(this)">
+                <i class="fas fa-folder"></i>
+                <span>Struktur Kepengurusan</span>
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
+            
+            <a href="program-kegiatan.html" class="menu-button" onclick="handleClick(this)">
+                <i class="fas fa-list"></i>
+                <span>Program & Kegiatan</span>
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
+            
+            <a href="informasi-lokasi.html" class="menu-button" onclick="handleClick(this)">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Informasi & Lokasi</span>
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
+            
+            <a href="dokumentasi-kegiatan.html" class="menu-button" onclick="handleClick(this)">
+                <i class="fas fa-camera"></i>
+                <span>Dokumentasi Kegiatan</span>
+                <i class="fas fa-ellipsis-v"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function handleClick(element) {
+            // Add click effect
+            element.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                element.style.transform = '';
+            }, 150);
+        }
+
+        // Add loading animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.menu-button');
+            buttons.forEach((button, index) => {
+                button.style.animationDelay = (index * 0.1) + 's';
+                button.classList.add('fade-in');
+            });
+        });
+    </script>
+</body>
+</html> 
